@@ -1,0 +1,31 @@
+// Import var + reset
+@import "common.less";
+
+/* LAYOUT */
+body{margin:0 auto;min-width:1000px;background:@colorBg1;font-family:@open;}
+
+
+/* /LAYOUT */
+
+/*Import Plugins styles*/
+@import "plugins.less";
+
+/*Import Media Queries*/
+@import "mq.less";
+
+
+/*PRINT*/
+@media print {
+    * { position: static !important; float: none !important; background: transparent !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; }
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    h2, h3 { page-break-after: avoid; }
+    .noprint{display:none;}
+}
