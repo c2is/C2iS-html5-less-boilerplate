@@ -5,7 +5,7 @@ $(function() { //domReady
 
     // ScrollTop onload (mobile) si il n'y a pas d'ancre
     if(/mobile/i.test(navigator.userAgent) && !location.hash){
-        $(window).scrollTo(0, 1);
+        window.scrollTo(0, 1);
     }
 
 // Test log exe front.js

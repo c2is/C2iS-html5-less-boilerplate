@@ -1,6 +1,6 @@
 <!-- End of document -->
 	<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src='+templatePath+'"js/libs/jquery-1.7.2.min.js">\x3C/script>')</script>
+	<script>window.jQuery || document.write('<script src='+templatePath+'"js/libs/jquery-1.8.0.min.js">\x3C/script>')</script>
 
 	<script>
 		head.js(
