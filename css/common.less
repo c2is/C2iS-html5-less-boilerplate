@@ -98,10 +98,15 @@ input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 textarea { overflow: auto;  resize: vertical; }
 
-::-webkit-input-placeholder  { color:@colorGris1; }
-input:-moz-placeholder { color:@colorGris1; }
-input:-ms-placeholder { color:@colorGris1; }
-input.placeholder { color:@colorGris1; }
+/*PLACEHOLDER*/
+*::-webkit-input-placeholder { color:@colorGris1; }
+*:-moz-placeholder { color:@colorGris1; }
+*:-ms-placeholder { color:@colorGris1; }
+*.placeholder { color:@colorGris1; }
+    /* :focus - lighten() for dark bg & light text || darken() for light bg & dark text */
+    *:focus::-webkit-input-placeholder{color:lighten(@colorGris1, 50%);-webkit-transition:all .5s ease;}
+    *:focus:-moz-placeholder{color:lighten(@colorGris1, 50%);transition:all .5s ease;}
+    *:focus:-ms-placeholder{color:lighten(@colorGris1, 50%);transition:all .5s ease;}
 
 /* MICRO CLEARFIX : http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clear:before, .clear:after { content: ""; display: table; }
