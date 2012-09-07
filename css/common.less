@@ -3,7 +3,7 @@
 /*Variables*/
 @oWidth: 973px;
 @oWidthContent: 775px;
-.widthCenter(){margin:0 auto;max-width:@oWidth;}
+._widthCenter(){margin:0 auto;max-width:@oWidth;}
 
 @colorGris1: #444; /* Gris 1 */
 @colorGris2: #292929; /* Gris 2 */
@@ -14,20 +14,20 @@
 @colorBorder1: #eaeaea; /* border gris 1 */
 @radius: 4px;
 
-.border-radius(@radius:@radius) {
+._border-radius(@radius:@radius) {
     -webkit-border-radius: @radius;
     border-radius: @radius
 }
-.box-shadow(@shadow:3px 3px 10px 0px rgba(0,0,0,0.3)) {
+._box-shadow(@shadow:3px 3px 10px 0px rgba(0,0,0,0.3)) {
     -webkit-box-shadow: @shadow ;
     box-shadow: @shadow;
 }
-.text-shadow(@blur:10px, @horz:0px, @vert:0px, @rgba:rgba(0,0,0,0.7), @offx:0, @offy:0, @hex:#666) {
+._text-shadow(@blur:10px, @horz:0px, @vert:0px, @rgba:rgba(0,0,0,0.7), @offx:0, @offy:0, @hex:#666) {
     text-shadow: @horz @vert @blur @rgba;
 //filter: glow(color=@hex,strength=@blur);
 //filter: dropshadow(color=@hex, offx=@offx, offy=@offy);
 }
-.transform(@transform) {
+._transform(@transform) {
     -webkit-transform:@transform;
     -moz-transform:@transform;
     -ms-transform:@transform;
