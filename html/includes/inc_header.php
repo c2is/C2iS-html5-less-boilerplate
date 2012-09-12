@@ -16,6 +16,12 @@
 
     <!--<script src="js/libs/head.js"></script>-->
     <script src="../js/libs/head.extended.js"></script><!--Version etendue de head.js avec + d options : syntaxe legerement differente -->
-    <script>var templatePath = '../';</script><!-- templatePath : chemin du template en absolue -->
+
+    <script>
+        // déclarations des variables statiques à la façon Drupal
+        var settingsGlobal = settingsGlobal|| {
+            sTemplatePath : '../' // chemin du template en absolue
+        }
+    </script>
 </head>
 <body>

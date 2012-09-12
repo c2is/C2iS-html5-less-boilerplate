@@ -1,13 +1,13 @@
 <!-- End of document -->
 	<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-	<script>window.jQuery || document.write('<script src='+templatePath+'"js/libs/jquery-1.8.0.min.js">\x3C/script>')</script>
+	<script>window.jQuery || document.write('<script src='+settingsGlobal.sTemplatePath+'"js/libs/jquery-1.8.0.min.js">\x3C/script>')</script>
 
 	<script>
 		head.js(
-			{modernizr: templatePath+"js/libs/modernizr-2.6.1.min.js"}, // test support html5 functionality
-			//{selectivizr: templatePath+"js/libs/selectivizr-min.js"}, // extend css selectors for IE 
-			{jqPlugins: templatePath+"js/plugins.js"},
-			{frontJS: templatePath+"js/front.js"}
+			{modernizr: settingsGlobal.sTemplatePath+"js/libs/modernizr-2.6.1.min.js"}, // test support html5 functionality
+			//{selectivizr: settingsGlobal.sTemplatePath+"js/libs/selectivizr-min.js"}, // extend css selectors for IE
+			{jqPlugins: settingsGlobal.sTemplatePath+"js/plugins.js"},
+			{frontJS: settingsGlobal.sTemplatePath+"js/front.js"}
 		);
 	</script>
 
