@@ -1,6 +1,23 @@
 /* Project: NOMPROJET - Date: 20120806 - Author: C2iS.fr > TRI */
 /* JS PLUGINS */
 
+var transEndEventName = getUserAgentElementName('transEndEventName');
+
+function getUserAgentElementName(sName){ // gestion des différentes valeurs css3 dépendantes du userAgent (transition, transform, animation,...)
+    var userAgentElementNames = {
+        transEndEventNames : {
+            WebkitTransition : 'webkitTransitionEnd',
+            MozTransition    : 'transitionend',
+            OTransition      : 'oTransitionEnd',
+            transition       : 'transitionend'
+        }
+    }
+    var userAgentElementName = {
+        transEndEventName : userAgentElementNames['transEndEventNames'][Modernizr.prefixed('transition') ]
+    }
+    return userAgentElementName[sName];
+}
+
 
 
 
