@@ -8,12 +8,16 @@
 @colorGris1: #444; /* Gris 1 */
 @colorGris2: #292929; /* Gris 2 */
 @colorBleu: #002e6e; /* Bleu */
-@colorTurquoise: #029cb8; /* Turquoise */
 @colorBg1: #f5f5f5; /* bg gris 1*/
 @colorBg2: #ededed; /* bg gris 2*/
 @colorBorder1: #eaeaea; /* border gris 1 */
 @radius: 4px;
 
+._opacity(@opacity:1) {
+    @opacityPercentage: @opacity * 100;
+    opacity: @opacity;
+    filter: ~"alpha(opacity = (@{opacityPercentage}))";
+}
 ._border-radius(@radius:@radius) {
     -webkit-border-radius: @radius;
     border-radius: @radius
@@ -33,6 +37,46 @@
     -ms-transform:@transform;
     -o-transform:@transform;
     transform:@transform;
+}
+._transition(@transition:all .4s ease-out) {
+    -webkit-transition:@transition;
+    -moz-transition:@transition;
+    -ms-transition:@transition;
+    -o-transition:@transition;
+    transition:@transition;
+}
+._transition-property(@transitionProperty:all) {
+    -webkit-transition-property:@transitionProperty;
+    -moz-transition-property:@transitionProperty;
+    -ms-transition-property:@transitionProperty;
+    -o-transition-property:@transitionProperty;
+    transition-property:@transitionProperty;
+}
+._transition-duration(@transitionDuration:.4s) {
+    -webkit-transition-duration:@transitionDuration;
+    -moz-transition-duration:@transitionDuration;
+    -ms-transition-duration:@transitionDuration;
+    -o-transition-duration:@transitionDuration;
+    transition-duration:@transitionDuration;
+}
+._transition-timing-function(@transitionTimingFunction:ease-out) {
+    -webkit-transition-timing-function:@transitionTimingFunction;
+    -moz-transition-timing-function:@transitionTimingFunction;
+    -ms-transition-timing-function:@transitionTimingFunction;
+    -o-transition-timing-function:@transitionTimingFunction;
+    transition-timing-function:@transitionTimingFunction;
+}
+._box-sizing(@sizing:border-box) {
+    -webkit-box-sizing:@sizing;
+    -moz-box-sizing:@sizing;
+    -ms-box-sizing:@sizing;
+    -o-box-sizing:@sizing;
+    box-sizing:@sizing;
+}
+/* Ajout du clearfix si impossible d'ajouter la class clear dans le code */
+._clear() {zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
 }
 /* Centrer verticalement dans un conteneur de hauteur fixe */
 ._verticalCenter(@height, @lineHeight:auto) {
