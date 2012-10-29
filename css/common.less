@@ -34,6 +34,13 @@
     -o-transform:@transform;
     transform:@transform;
 }
+/* Centrer verticalement dans un conteneur de hauteur fixe */
+._verticalCenter(@height, @lineHeight:auto) {
+  height: @height;                                                            /* Centrer verticalement une ligne de texte */
+  line-height: @height;
+  &>* {vertical-align:middle;display:inline-block;line-height:@lineHeight;}   /* Centrer verticalement plusieurs lignes de texte */
+  &>img {vertical-align:middle;}                                              /* Centrer verticalement une image de taille variable */
+}
 
 @open: 'Open Sans', sans-serif;
 @serif: Georgia, Times, "Times New Roman", serif;
