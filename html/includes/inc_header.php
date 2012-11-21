@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="../css/screen.css">
 
-    <!--<script src="js/libs/head.js"></script>-->
     <script src="../js/libs/head.extended.js"></script><!--Version etendue de head.js avec + d options : syntaxe legerement differente -->
 
     <script>

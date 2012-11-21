@@ -18,7 +18,7 @@ $(function() { //domReady
 
 // Gestion du click sur le parent
     if( $('.linkParent').length > 0 ) {
-        addLinkBlock();
+        $('.linkParent').addLinkBlock();
     }
 
 });
