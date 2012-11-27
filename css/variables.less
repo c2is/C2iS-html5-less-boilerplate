@@ -38,7 +38,14 @@
     -o-transform:@transform;
     transform:@transform;
 }
-._transition(@value1:all ease .4s,...){
+._transition(@transition:all ease .4s){
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+._multi-transition(@value1,@value2:all ease .4s,...){
     @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transition: @value;
     -moz-transition: @value;
