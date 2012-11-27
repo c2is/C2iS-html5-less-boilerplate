@@ -38,12 +38,13 @@
     -o-transform:@transform;
     transform:@transform;
 }
-._transition(@transition:all .4s ease-out) {
-    -webkit-transition:@transition;
-    -moz-transition:@transition;
-    -ms-transition:@transition;
-    -o-transition:@transition;
-    transition:@transition;
+._transition(@value1:all ease .4s,...){
+    @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -ms-transition: @value;
+    -o-transition: @value;
+    transition: @value;
 }
 ._transition-property(@transitionProperty:all) {
     -webkit-transition-property:@transitionProperty;
