@@ -266,6 +266,25 @@ function scrollTo(sTarget,iSpeed){ // animated scroll
         },
         "nth-last-of-type": function(elm, i, match) {
             return isNthOf(elm, match[3], "nextSibling");
+        },
+        "external": function(elm) {
+            if(!elm.href) {return false;}
+            return elm.hostname != location.hostname;
+        },
+        "mailto": function(elm) {
+            return $(elm).is('[href^="mailto:"]');
+        },
+        "tel": function(elm) {
+            return $(elm).is('[href^="tel:"]');
+        },
+        "secure": function(a) {
+            return $(a).is('[href^="https:"]');
+        },
+        "notsecure": function(a) {
+            return $(a).is('[href^="http:"]');
+        },
+        "selfanchor": function(a) {
+            return $(a).is('[href^="#"]');
         }
     }
     $.extend($.expr[':'], pseudos);
