@@ -7,7 +7,7 @@
 
         <?php include('includes/top.php'); ?>
 
-        <section class="clear">
+        <section class="clearer">
             Content goes here
         </section>
 
