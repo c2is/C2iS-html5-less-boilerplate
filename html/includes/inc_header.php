@@ -38,6 +38,11 @@
     </script>
 
     <script src="../js/libs/head.extended.js"></script><!--Version etendue de head.js avec + d options : syntaxe legerement differente -->
+    <!--// extend css selectors for IE -->
+    <!--[if lt IE 9]>
+    <script src="../js/libs/selectivizr-min.js"></script>
+    <![endif]-->
+
 
     <script>
         // déclarations des variables statiques à la façon Drupal

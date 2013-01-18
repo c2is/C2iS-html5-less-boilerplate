@@ -5,7 +5,6 @@
 	<script>
 		head.js(
 			{modernizr: settingsGlobal.sTemplatePath+"js/libs/modernizr-2.6.1.min.js"}, // test support html5 functionality
-			//{selectivizr: settingsGlobal.sTemplatePath+"js/libs/selectivizr-min.js"}, // extend css selectors for IE
 			{jqPlugins: settingsGlobal.sTemplatePath+"js/plugins.js"},
 			{frontJS: settingsGlobal.sTemplatePath+"js/front.js"}
 		);
