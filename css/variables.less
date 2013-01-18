@@ -171,6 +171,20 @@
   &>img {vertical-align:middle;}                                              /* Centrer verticalement une image de taille variable */
 }
 
+/*
+ * definie une hauteur fixe à un bloc en fonction du nombre maximum de lignes et du line-height et ajout un overflow hidden par defaut
+ * @params :
+ * - @nbLine :          integer |   Obligatoire                  |  nombre de lignes désirés
+ * - @lineHeight :      string  |   Obligatoire (em, px, %)      |  hauteur de chaque ligne
+ * - @adjust :          float   |   Optionel [default : 0 ]      |  decalage de la hauteur pour ajuster en fonction des typo
+ * - @overflow :        string  |   Optionel [default : hidden ] |  règle l'overflow si besoin
+ */
+._maxLineHeight(@nbLine,@lineHeight,@adjust:0,@overflow:hidden){
+    line-height: @lineHeight;
+    height: (@nbLine*@lineHeight) - @adjust ;
+    overflow: @overflow;
+}
+
 @open: 'Open Sans', sans-serif;
 @serif: Georgia, Times, "Times New Roman", serif;
 
