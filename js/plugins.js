@@ -105,7 +105,7 @@ function scrollTo(sTarget,iSpeed){ // animated scroll
                     var event = e;
                     if (!e)
                         event = window.event;
-                    if (event && event.target != oElem[0]) {
+                    if (event && event.target != oElem[0] && !$(event.target).parents('a').length && !$(event.target).is('a')) {
                         var sHref = oElem.attr('href'),
                             sTarget = oElem.attr('target')?oElem.attr('target'):'_self';
                         //consoleLog(sHref);
